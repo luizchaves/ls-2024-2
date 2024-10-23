@@ -150,3 +150,11 @@ console.log(numberList);
 // ...
 // 19, 17, ..., 11
 // 00, 07, ..., 01
+numberList = '';
+
+for (let decimal = 0; decimal <= 9; decimal++) {
+  for (let unit = 0; unit <= 9; unit++) {
+    numberList += `${decimal}${unit}`;
+    numberList += unit === 9 ? '\n' : ', ';
+  }
+}
