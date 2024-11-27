@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Lista</h1>
+    <ul></ul>
+
+    <script>
+      function createList(length, text = 'Text') {
+        return Array.from({ length }, (_, i) => i + 1)
+          .map((i) => `<li>${text} ${i}</li>`)
+          .join('');
+      }
+
+      const count = Number(prompt('Defina a quantidade de itens da lista:'));
+
+      console.log(count);
+
+      const ulTag = document.querySelector('ul');
+
+      ulTag.innerHTML = createList(count);
+    </script>
+  </body>
+</html>
